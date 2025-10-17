@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -42,7 +44,6 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -66,3 +67,21 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+@import "tailwindcss";
+
+@theme inline {
+  --shadow-input:
+    0px 2px 3px -1px rgba(0, 0, 0, 0.1),
+    0px 1px 0px 0px rgba(25, 28, 33, 0.02),
+    0px 0px 0px 1px rgba(25, 28, 33, 0.08);
+}
+/* For Chrome, Edge, Safari */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  appearance: none;
+}
+
+input[type="number"] {
+  appearance: none;
+}
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
